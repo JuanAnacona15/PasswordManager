@@ -6,7 +6,7 @@ class GeneratePassword:
         self.lowrcase = "abcdefghijklmnopqrstuvwxyz"
         self.capitalLetters = self.lowrcase.upper()
         self.numbers = "0123456789"
-        self.characters = "!'#$%&/()=?¡¿*@{}]._;><[+-:,"
+        self.characters = "!'#$%&/()=?¡¿*@{}]._;><[+-:"
         self.DefaultLegth = 15
         
     def Custom(self, lowers, capitals, numbers, characters):
@@ -29,3 +29,4 @@ class GeneratePassword:
     
     def Default(self):
         password = "".join(random.sample(self.lowrcase + self.capitalLetters + self.numbers + self.characters, self.DefaultLegth))
+        return password
